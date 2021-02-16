@@ -56,3 +56,16 @@ IntNumber IntNumber::operator/(const IntNumber& intNumber)
 	IntNumber division(this->number / intNumber.number);
 	return division;
 }
+
+std::ostream& operator<<(std::ostream& os, const IntNumber& intNumber)
+{
+	os << "Number " << intNumber.number << "\n";
+	return os;
+}
+
+std::istream& operator >> (std::istream& is, IntNumber& intNumber)
+{
+	std::cout << "Enter number\n";
+	is >> intNumber.number;
+	return is;
+}
