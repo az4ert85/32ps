@@ -10,6 +10,12 @@ public:
 
 	IntNumber GetGreater(IntNumber* intNumber) const;
 	IntNumber GetLess(IntNumber* intNumber) const;
+
+	IntNumber operator+(const IntNumber& intNumber);
+	IntNumber operator-(const IntNumber& intNumber);
+	IntNumber operator*(const IntNumber& intNumber);
+	IntNumber operator/(const IntNumber& intNumber);
+
 	void Write()
 	{
 		std::cout << "Number " << number << "\n";

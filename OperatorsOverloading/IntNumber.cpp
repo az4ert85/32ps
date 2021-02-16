@@ -14,7 +14,6 @@ IntNumber::IntNumber(int number)
 
 IntNumber::IntNumber(const IntNumber& intNumber)
 {
-	std::cout << "Copy constructor";
 	number = intNumber.number;
 }
 
@@ -34,4 +33,26 @@ IntNumber IntNumber::GetLess(IntNumber* number) const
 
 IntNumber::~IntNumber()
 {
+}
+
+
+IntNumber IntNumber::operator+(const IntNumber& intNumber)
+{
+	IntNumber suma(this->number + intNumber.number);
+	return suma;
+}
+IntNumber IntNumber::operator-(const IntNumber& intNumber)
+{
+	IntNumber minus(this->number - intNumber.number);
+	return minus;
+}
+IntNumber IntNumber::operator*(const IntNumber& intNumber)
+{
+	IntNumber product(this->number * intNumber.number);
+	return product;
+}
+IntNumber IntNumber::operator/(const IntNumber& intNumber)
+{
+	IntNumber division(this->number / intNumber.number);
+	return division;
 }
